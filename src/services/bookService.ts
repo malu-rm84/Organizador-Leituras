@@ -43,7 +43,15 @@ export async function fetchBooksByUserId(userId: string): Promise<Book[]> {
 
 export async function addBook(bookData: Omit<Book, "id">): Promise<string> {
   try {
-    const docRef = await addDoc(collection(db, "books"), bookData);
+    // Remove undefined fields before adding to Firestore
+    const cleanedData = Object.entries(bookData).reduce((acc, [key, value]) => {
+      if (value !== undefined) {
+        acc[key] = value;
+      }
+      return acc;
+    }, {} as Record<string, any>);
+    
+    const docRef = await addDoc(collection(db, "books"), cleanedData);
     return docRef.id;
   } catch (error) {
     console.error("Error adding book:", error);
@@ -53,8 +61,16 @@ export async function addBook(bookData: Omit<Book, "id">): Promise<string> {
 
 export async function updateBook(id: string, bookData: Partial<Book>): Promise<void> {
   try {
+    // Remove undefined fields before updating in Firestore
+    const cleanedData = Object.entries(bookData).reduce((acc, [key, value]) => {
+      if (value !== undefined) {
+        acc[key] = value;
+      }
+      return acc;
+    }, {} as Record<string, any>);
+    
     const bookRef = doc(db, "books", id);
-    await updateDoc(bookRef, bookData);
+    await updateDoc(bookRef, cleanedData);
   } catch (error) {
     console.error("Error updating book:", error);
     throw error;
