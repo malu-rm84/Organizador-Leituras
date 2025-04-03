@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useEffect, useState } from "react";
 import {
   User,
@@ -67,11 +66,25 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         title: "Login bem sucedido",
         description: "Você foi conectado com sucesso!",
       });
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error signing in with Google", error);
+      
+      let errorMessage = "Ocorreu um erro ao tentar fazer login com o Google.";
+      
+      // Mensagens de erro mais específicas
+      if (error.code === 'auth/unauthorized-domain') {
+        errorMessage = "Este domínio não está autorizado para autenticação. Se estiver em desenvolvimento local, configure os emuladores do Firebase ou adicione o domínio ao console do Firebase.";
+      } else if (error.code === 'auth/popup-closed-by-user') {
+        errorMessage = "O popup de login foi fechado antes da autenticação ser concluída.";
+      } else if (error.code === 'auth/cancelled-popup-request') {
+        errorMessage = "A operação de login foi cancelada.";
+      } else if (error.code === 'auth/popup-blocked') {
+        errorMessage = "O popup de login foi bloqueado pelo navegador.";
+      }
+      
       toast({
         title: "Erro ao fazer login",
-        description: "Ocorreu um erro ao tentar fazer login com o Google.",
+        description: errorMessage,
         variant: "destructive",
       });
     }
