@@ -206,7 +206,7 @@ const Collection = () => {
           </p>
         </div>
         
-        <Button onClick={() => navigate("/add-book")}>
+        <Button onClick={() => navigate("/AddBook")}>
           <PlusCircle className="mr-2 h-4 w-4" />
           Adicionar Livro
         </Button>
@@ -252,7 +252,7 @@ const Collection = () => {
               : "Nenhum livro corresponde aos filtros selecionados."}
           </p>
           {books.length === 0 && (
-            <Button onClick={() => navigate("/add-book")}>
+            <Button onClick={() => navigate("/AddBook")}>
               <PlusCircle className="mr-2 h-4 w-4" />
               Adicionar Livro
             </Button>
