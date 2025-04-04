@@ -150,7 +150,7 @@ const Index = () => {
           </Select>
           
           <Button asChild>
-            <Link to="/AddBook">
+            <Link to="/addbook">
               <PlusCircle className="mr-2 h-4 w-4" />
               Adicionar Livro
             </Link>
@@ -173,7 +173,7 @@ const Index = () => {
           </p>
           {books.length === 0 && (
             <Button asChild>
-              <Link to="/AddBook">
+              <Link to="/addbook">
                 <PlusCircle className="mr-2 h-4 w-4" />
                 Adicionar Livro
               </Link>

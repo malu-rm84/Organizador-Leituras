@@ -49,8 +49,8 @@ const Navbar = () => {
                 </div>
               </Link>
               <Link 
-                to="/AddBook" 
-                className={`px-3 py-2 rounded-md hover:bg-secondary transition-colors ${isActive('/AddBook')}`}
+                to="/addbook" 
+                className={`px-3 py-2 rounded-md hover:bg-secondary transition-colors ${isActive('/addbook')}`}
               >
                 <div className="flex items-center gap-2">
                   <PlusCircle size={18} />
