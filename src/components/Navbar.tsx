@@ -1,10 +1,9 @@
-
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Book, PlusCircle, BookOpen, UserCircle } from 'lucide-react';
+import { Book, BookOpen, PlusCircle, UserCircle } from 'lucide-react';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { useToast } from '@/components/ui/use-toast';
 
@@ -33,7 +32,7 @@ const Navbar = () => {
     <header className="bg-card border-b border-border">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 text-xl font-bold text-primary">
-          <Book size={24} />
+          <Book size={28} />
           <span>Organizador de Leituras</span>
         </Link>
 

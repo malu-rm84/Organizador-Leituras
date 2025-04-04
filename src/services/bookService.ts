@@ -1,4 +1,3 @@
-
 import { db } from "@/lib/firebase";
 import { 
   collection, 
@@ -24,6 +23,8 @@ export interface Book {
   rating?: number;
   userId: string;
   notes?: string;
+  language?: string;
+  favorite?: boolean;
 }
 
 export async function fetchBooksByUserId(userId: string): Promise<Book[]> {
