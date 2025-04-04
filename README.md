@@ -1,73 +1,77 @@
-# Welcome to your Lovable project
+# 📚 Organizador Leituras
 
-## Project info
+**Organizador Leituras** é uma aplicação web desenvolvida para ajudar leitores a organizarem seus livros de forma simples, bonita e eficiente.
 
-**URL**: https://lovable.dev/projects/8c23ad41-636e-46ad-9f86-9b1c7dc2090b
+Com uma interface limpa e moderna, é possível:
 
-## How can I edit this code?
+- 📖 Adicionar livros com informações detalhadas
+- 🚦 Definir o status de leitura: **não lido**, **lendo** e **lido**
+- 📝 Adicionar anotações personalizadas sobre cada livro
+- ⭐ Atribuir notas aos livros já lidos
+- 🔍 Buscar livros automaticamente com base no nome, preenchendo informações como:
+  - Autor
+  - Número de páginas
+  - Gênero
+  - Sinopse
 
-There are several ways of editing your application.
+Essas informações são obtidas de forma automática por meio de integração com APIs públicas de livros, proporcionando uma experiência fluida e intuitiva para o usuário.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8c23ad41-636e-46ad-9f86-9b1c7dc2090b) and start prompting.
+## 🚀 Tecnologias Utilizadas
 
-Changes made via Lovable will be committed automatically to this repo.
+Este projeto foi desenvolvido com as seguintes tecnologias:
 
-**Use your preferred IDE**
+- ⚡ [Vite](https://vitejs.dev/) – build tool rápido e moderno
+- 🧠 [TypeScript](https://www.typescriptlang.org/) – tipagem estática para JavaScript
+- ⚛️ [React](https://reactjs.org/) – biblioteca para construção de interfaces
+- 🧩 [shadcn/ui](https://ui.shadcn.com/) – componentes acessíveis e estilizados com Tailwind
+- 🎨 [Tailwind CSS](https://tailwindcss.com/) – framework CSS utilitário
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 💡 Funcionalidades
 
-Follow these steps:
+- Adicionar livros à lista de leitura
+- Organizar por status: **quero ler**, **lendo**, **lido**
+- Interface responsiva e moderna
+- Componentes reutilizáveis e acessíveis
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🌐 Acesse o projeto online
+🔗 [Veja o projeto funcionando aqui](https://malu-rm84.github.io/Organizador-Leituras/)
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 🛠️ Como rodar o projeto localmente
+
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/Organizador-Leituras.git
+
+# Acesse a pasta do projeto
+cd Organizador-Leituras
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
 npm run dev
 ```
+Acesse no navegador: http://localhost:5173
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📁 Estrutura básica
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8c23ad41-636e-46ad-9f86-9b1c7dc2090b) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Organizador-Leituras/
+├─ public/
+├─ src/
+│  ├─ components/
+│  ├─ pages/
+│  ├─ App.tsx
+│  └─ main.tsx
+├─ tailwind.config.ts
+├─ vite.config.ts
+└─ README.md
